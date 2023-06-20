@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
+    background-color:#add8e6;
   }
 
   h1 {
@@ -28,3 +29,16 @@ body {
     border-radius: 4px;
     cursor: pointer;
   }
+
+  #resultado {
+    width: 400px;
+    height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+  }
+  
