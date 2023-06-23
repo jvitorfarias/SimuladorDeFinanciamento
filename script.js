@@ -14,22 +14,33 @@ let resultado = parseFloat(valor * taxa * parcelas);
 
 alert ("Valor total financiado é: R$ " + resultado)*/
 
-
-// Capturar o formulário
 const form = document.getElementById('formFinanciamento');
 
-// Adicionar um ouvinte de eventos para o envio do formulário
 form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Evitar o comportamento padrão de envio do formulário
+  event.preventDefault();
 
-  // Ler os valores dos campos do formulário
   const valor = parseFloat(document.getElementById('valor').value);
   const juros = parseFloat(document.getElementById('juros').value);
   const parcelas = parseInt(document.getElementById('parcelas').value);
 
-  // Calcular o resultado
   const resultado = valor + (valor * juros * parcelas);
-
-  // Exibir o resultado na tela
   document.getElementById('resultado').textContent = "O valor total do financiamento é: R$ " + resultado;
 });
+
+const veiculos = ["Carro", "Moto", "Caminhão", "Van", "Ônibus"];
+  const selectVeiculo = document.getElementById("veiculo");
+  
+  veiculos.forEach(veiculo => {
+    const option = document.createElement("option");
+    option.textContent = veiculo;
+    selectVeiculo.appendChild(option);
+  });
+
+  selectVeiculo.addEventListener('change', function() {
+    const veiculoSelecionado = selectVeiculo.value;
+    document.getElementById('veiculoSelecionado').textContent = "Veículo selecionado: " + veiculoSelecionado;
+  });
+
+  
+
+  
