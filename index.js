@@ -8,4 +8,6 @@ const produtos = [
   produtos.sort((a, b) => b.valor - a.valor);
   
   console.log(produtos);
+
+  
   
