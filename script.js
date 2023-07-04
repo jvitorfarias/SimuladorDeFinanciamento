@@ -41,6 +41,13 @@ const veiculos = ["Carro", "Moto", "Caminhão", "Van", "Ônibus"];
     document.getElementById('veiculoSelecionado').textContent = "Veículo selecionado: " + veiculoSelecionado;
   });
 
+  document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) {
+      console.log('Tecla Enter pressionada!');
+    }
+  });
+  
+
   
 
   
