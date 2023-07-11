@@ -1,0 +1,35 @@
+{
+    "carsList": [
+        {
+            "brand": "Audi",
+            "photo": "pictures/8521abde76f1d21a9dec256fb106d083.jpg",
+            "model": "RSQ8",
+            "year": "2022/2022",
+            "km": "6050km",
+            "price": 1100000
+        },
+        {
+            "brand": "BMW",
+            "photo": "pictures/m2Competition.jpg",
+            "model": "M2 Competition",
+            "year": "2018/2019",
+            "km": "30325km",
+            "price": 420000
+        },
+        {
+            "brand": "Ford",
+            "photo": "pictures/GT500.jpg",
+            "model": "Mustang Shelby GT500",
+            "year": "2022/2022",
+            "km": "1790km",
+            "price": 1550000
+        },
+        {
+            "brand": "Mercedes",
+            "photo": "pictures/c63s.jpg",
+            "model": "C63 S AMG",
+            "year": "2019/2020",
+            "km": "8000km",
+            "price": 620000
+        }
+]}

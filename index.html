@@ -1,36 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Financiamento</title>
-    <link rel="stylesheet" href="styless.css">
+     <link rel="stylesheet" href="styless.css">
 </head>
 <body>
-    <h1>Simulador de Financiamento</h1>
+  <div id="car"></div>
+  <h1>Simulador de Financiamento</h1>
+  <form id="formFinanciamento">
+    <label for="valor">Valor do financiamento:</label>
+    <input type="number" id="valor" required>
+    <label for="parcelas">Quantidade de parcelas:</label>
+    <input type="number" id="parcelas" required>
+
+    <p>Nossa taxa de juros é de 1,7% ao mês</p>
   
-    <form id="formFinanciamento">
-      <label for="valor">Valor do financiamento:</label>
-      <input type="number" id="valor" required>
-  
-      <label for="juros">Taxa de juros (% ao mês):</label>
-      <input type="number" id="juros" required>
-  
-      <label for="parcelas">Quantidade de parcelas:</label>
-      <input type="number" id="parcelas" required>
+    <button type="submit">Calcular</button>
+  </form>
 
-      <label for="veiculo">Veículo:</label>
-      <select id="veiculo" required></select>
-  
-      <button type="submit">Calcular</button>
-    </form>
-
-    <div id="resultado"></div>
-
-    <div id="veiculoSelecionado"></div>
-
-
-    <script src="script.js"></script>
+  <div id="resultado"></div>
+  <script src="script.js"></script>
 </body>
 </html>

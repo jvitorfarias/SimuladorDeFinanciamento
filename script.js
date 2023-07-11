@@ -1,3 +1,78 @@
+const cars1 = document.getElementById("car")
+
+fetch("carsList.json").then((response) => {
+  response.json().then((dados) => {
+    dados.carsList.forEach((cars) => {
+      const folder = document.createElement("div")
+      folder.className = "listCars"
+      const header = document.createElement("h3")
+      header.innerText = cars.brand
+      folder.appendChild(header)
+
+      const photos = document.createElement("p")
+      photos.innerHTML = cars.photo
+      folder.appendChild(photos)
+
+      const dataSheetModel = document.createElement("p")
+      dataSheetModel.innerText = cars.model
+      folder.appendChild(dataSheetModel)
+
+      const dataSheetYear = document.createElement("p")
+      dataSheetYear.innerText = cars.year
+      folder.appendChild(dataSheetYear)
+
+      const dataSheetKm = document.createElement("p")
+      dataSheetKm.innerText = cars.km
+      folder.appendChild(dataSheetKm)
+
+      const price = document.createElement("p")
+      price.innerText = cars.price
+      folder.appendChild(price)
+
+      const button = document.createElement("button")
+      button.innerText = "Solicitar proposta"
+      button.addEventListener("click", () => {
+        console.log("Enviaremos uma proposta para o email cadastrado!")
+      })
+      folder.appendChild(button)
+      cars1.appendChild(folder)
+    });
+  })
+  })
+
+const form = document.getElementById("formFinanciamento");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault()
+
+  let valor = Number(document.getElementById("valor").value);
+  //let valorConvertido = Number(valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL"}))
+  let parcelas = Number(document.getElementById("parcelas").value);
+  let resultado = valor / parcelas
+  //let resultadoFormatado = resultado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+  document.getElementById("resultado").textContent = `${parcelas} parcelas de R$ ${resultado * 1.7}`
+});
+
+//const veiculos = ["Carro", "Moto", "Caminhão", "Van", "Ônibus"];
+//  const selectVeiculo = document.getElementById("veiculo");
+//  
+//  veiculos.forEach(veiculo => {
+//    const option = document.createElement("option");
+//    option.textContent = veiculo;
+//    selectVeiculo.appendChild(option);
+//  });
+//
+//  selectVeiculo.addEventListener('change', function() {
+//    const veiculoSelecionado = selectVeiculo.value;
+//    document.getElementById('veiculoSelecionado').textContent = "Veículo selecionado: " + veiculoSelecionado;
+//  });
+//
+//  document.addEventListener('keydown', function(event) {
+//    if (event.keyCode === 13) {
+//      console.log('Tecla Enter pressionada!');
+//    }
+//  });
+  
 /*const calcularFinanciamento = (valor, juros, parcelas) =>  valor + (valor * juros * parcelas);
 
 let valor = parseFloat(prompt("Digite o valor do financiamento:"));
@@ -13,41 +88,3 @@ let parcelas = prompt("Quantidade de parcelas")
 let resultado = parseFloat(valor * taxa * parcelas);
 
 alert ("Valor total financiado é: R$ " + resultado)*/
-
-const form = document.getElementById('formFinanciamento');
-
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  const valor = parseFloat(document.getElementById('valor').value);
-  const juros = parseFloat(document.getElementById('juros').value);
-  const parcelas = parseInt(document.getElementById('parcelas').value);
-
-  const resultado = valor + (valor * juros * parcelas);
-  document.getElementById('resultado').textContent = "O valor total do financiamento é: R$ " + resultado;
-});
-
-const veiculos = ["Carro", "Moto", "Caminhão", "Van", "Ônibus"];
-  const selectVeiculo = document.getElementById("veiculo");
-  
-  veiculos.forEach(veiculo => {
-    const option = document.createElement("option");
-    option.textContent = veiculo;
-    selectVeiculo.appendChild(option);
-  });
-
-  selectVeiculo.addEventListener('change', function() {
-    const veiculoSelecionado = selectVeiculo.value;
-    document.getElementById('veiculoSelecionado').textContent = "Veículo selecionado: " + veiculoSelecionado;
-  });
-
-  document.addEventListener('keydown', function(event) {
-    if (event.keyCode === 13) {
-      console.log('Tecla Enter pressionada!');
-    }
-  });
-  
-
-  
-
-  
