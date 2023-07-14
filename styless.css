@@ -52,9 +52,13 @@ button {
   align-items: center;
 }
 
-.cars-size {
+.photoCars {
   max-width: 500px;
   max-height: 250px;
   width: auto;
   height: auto;
+}
+
+.tabela {
+  word-break: break-word;
 }
