@@ -32,9 +32,18 @@ fetch("carsList.json").then((response) => {
 
       const button = document.createElement("button")
       button.innerText = "Solicitar proposta"
+      
       button.addEventListener("click", () => {
-        console.log("Enviaremos uma proposta para o email cadastrado!")
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Sua proposta foi solicitada!',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        
       })
+
       folder.appendChild(button)
       cars1.appendChild(folder)
     })
@@ -66,6 +75,11 @@ form.addEventListener("submit", function(event) {
   let financiado = document.createElement("p")
   financiado.innerText = `Valor financiado (R$): ${(valorTotal).toFixed(2)}`
   tabela.appendChild(financiado)
+})
+
+anime({
+  targets: '.square',
+  translateX: 250
 })
 
 //const veiculos = ["Carro", "Moto", "Caminhão", "Van", "Ônibus"]
