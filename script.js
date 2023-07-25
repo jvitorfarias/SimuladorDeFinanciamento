@@ -27,7 +27,7 @@ fetch("carsList.json").then((response) => {
       folder.appendChild(dataSheetKm)
 
       const price = document.createElement("p")
-      price.innerText = cars.price
+      price.innerText = `R$ ${cars.price}`
       folder.appendChild(price)
 
       const button = document.createElement("button")
@@ -65,7 +65,7 @@ form.addEventListener("submit", function(event) {
   tabela.className = "tabela"
 
   let prestacao = document.createElement("p")
-  prestacao.innerText = `Valor prestação (R$): ${(resultado).toFixed(2)}`
+  prestacao.innerText = `Valor prestação: R$ ${(resultado).toFixed(2)}`
   tabela.appendChild(prestacao)
 
   let prestacoes = document.createElement("p")
@@ -73,14 +73,11 @@ form.addEventListener("submit", function(event) {
   tabela.appendChild(prestacoes)
 
   let financiado = document.createElement("p")
-  financiado.innerText = `Valor financiado (R$): ${(valorTotal).toFixed(2)}`
+  financiado.innerText = `Valor financiado: R$ ${(valorTotal).toFixed(2)}`
   tabela.appendChild(financiado)
 })
 
-anime({
-  targets: '.square',
-  translateX: 250
-})
+
 
 //const veiculos = ["Carro", "Moto", "Caminhão", "Van", "Ônibus"]
 //  const selectVeiculo = document.getElementById("veiculo")

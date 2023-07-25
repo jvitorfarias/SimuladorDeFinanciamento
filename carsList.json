@@ -31,5 +31,61 @@
             "year": "2019/2020",
             "km": "8000km",
             "price": 620000
+        },
+        {
+            "brand": "Toyota",
+            "photo": "pictures/Supra.jpg",
+            "model": "Supra",
+            "year": "2022/2022",
+            "km": "3000km",
+            "price": 910000
+        },
+        {
+            "brand": "Nissan",
+            "photo": "pictures/GTR35NISMO.jpg",
+            "model": "GTR R35 NISMO",
+            "year": "2023/2023",
+            "km": "0km",
+            "price": 1000000
+        },
+        {
+            "brand": "Land Rover",
+            "photo": "pictures/RRVogue.jpg",
+            "model": "Range Rover Vogue",
+            "year": "2022/2022",
+            "km": "5000km",
+            "price": 1102000
+        },
+        {
+            "brand": "BMW",
+            "photo": "pictures/X1.jpg",
+            "model": "X1",
+            "year": "2021/2021",
+            "km": "19078km",
+            "price": 220700
+        },
+        {
+            "brand": "Audi",
+            "photo": "pictures/rs6Avant.jpg",
+            "model": "RS6 Avant",
+            "year": "2021/2021",
+            "km": "29321km",
+            "price": 871990
+        },
+        {
+            "brand": "Honda",
+            "photo": "pictures/TypeR.jpg",
+            "model": "Civic Type R",
+            "year": "2023/2023",
+            "km": "0km",
+            "price": 434900
+        },
+        {
+            "brand": "Toyota",
+            "photo": "pictures/corollaGR.jpg",
+            "model": "Corolla GR",
+            "year": "2023/2023",
+            "km": "0km",
+            "price": 461990
         }
 ]}
