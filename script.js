@@ -1,3 +1,8 @@
+function darkMode() {
+  let modeDark = document.getElementById("modoEscuro")
+  modeDark.classList.toggle("dark")
+}
+
 const cars1 = document.getElementById("car")
 
 fetch("carsList.json").then((response) => {
@@ -61,8 +66,6 @@ form.addEventListener("submit", function(event) {
   let parcelas = Number(document.getElementById("parcelas").value)
   let resultado = (valor / parcelas) * 1.7
   let valorTotal = resultado * parcelas
-
-  tabela.className = "tabela"
 
   let prestacao = document.createElement("p")
   prestacao.innerText = `Valor prestação: R$ ${(resultado).toFixed(2)}`
